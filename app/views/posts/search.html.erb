@@ -1,0 +1,9 @@
+<ul>
+<% @search.each_hit_with_result do |hit, post| %>
+<li><span style="color:red"><%= hit.score %></span><%= post.title %>
+	<p><%= truncate(post.content, :length => 100) %></p>
+</li>
+    
+    
+<% end %>      
+</ul>
